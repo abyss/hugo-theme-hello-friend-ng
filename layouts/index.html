@@ -10,11 +10,14 @@
                 <p>{{.}}</p>
             {{- end }}
 
-            {{- with .Site.Params.social }}
-                <div>
+            <div>
+                {{- with .Site.Params.social.main }}
                     {{ partial "social-icons.html" . }}
-                </div>
-            {{- end }}
+                {{- end }}
+                {{- with .Site.Params.social.extra }}
+                    {{ partial "social-icons.html" . }}
+                {{- end }}
+            </div>
         </div>
     </main>
 {{ end }}

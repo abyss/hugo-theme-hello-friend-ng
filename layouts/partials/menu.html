@@ -4,5 +4,8 @@
         {{ range .Site.Menus.main -}}
             <li><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
         {{- end }}
+        {{ range .Site.Menus.extra -}}
+            <li><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
+        {{- end }}
     </ul>
 </nav>
