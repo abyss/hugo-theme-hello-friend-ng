@@ -5,11 +5,10 @@
         {{ else }}
             <span class="logo__mark">$</span>
             <span class="logo__text">
-              {{ if ($firstUrlElement := index (split .RelPermalink "/") 1) }}
-                cd /{{ $firstUrlElement }}/
-              {{ else }}
-                cd /
-              {{ end }}
+              cd /
+              {{- if ($firstUrlElement := index (split .RelPermalink "/") 1) -}}
+                {{- $firstUrlElement -}}/
+              {{- end -}}
             </span>
             <span class="logo__cursor" style=
                   "{{ with .Site.Params.Logo.logoCursorDisabled }}visibility:hidden;{{ end }}
