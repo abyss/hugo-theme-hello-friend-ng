@@ -7,13 +7,13 @@
             <span class="logo__text">
               cd /
               {{- if ($firstUrlElement := index (split .RelPermalink "/") 1) -}}
-                {{- $firstUrlElement -}}/
+                {{- replace $firstUrlElement ".html" "" -}}/
               {{- end -}}
             </span>
             <span class="logo__cursor" style=
-                  "{{ with .Site.Params.Logo.logoCursorDisabled }}visibility:hidden;{{ end }}
-                   {{ with .Site.Params.Logo.logoCursorColor    }}background-color:{{ . }};{{ end }}
-                   {{ with .Site.Params.Logo.logoCursorAnimate  }}animation-duration:{{ . }};{{ end }}">
+                  "{{ with .Site.Params.Logo.logoCursorDisabled }}visibility: hidden;{{ end }}
+                  {{ with .Site.Params.Logo.logoCursorColor     }}background-color: {{ . }};{{ end }}
+                  {{ with .Site.Params.Logo.logoCursorAnimate   }}animation-duration: {{ . }};{{ end }}">
             </span>
         {{ end }}
     </div>
