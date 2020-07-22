@@ -1,33 +1,15 @@
-# Hello Friend NG
+# Hello Abyss
 
-![Hello Friend NG](https://dsh.re/2bd45)
+## General information
 
-## General informations
+This theme is a modified version of [hello-friend-ng](https://github.com/rhazdon/hugo-theme-hello-friend-ng) by Djordje Atlialp. Check it out, maybe it will work better for your purposes. If you really like this theme, buy him a coffee.
 
-This theme was highly inspired by the [hello-friend](https://github.com/panr/hugo-theme-hello-friend) and [hermit](https://github.com/Track3/hermit). A lot of kudos for theier great work.
-
----
-## Table of Contents
-
-- [Features](#features)
-- [How to start](#how-to-start)
-- [How to configure](#how-to-configure)
-- [More](#more-things)
-  - [Built in shortcodes](#built-in-shortcodes)
-    - [image](#image)
-  - [Code highlighting](#code-highlighting)
-  - [Favicon](#favicon)
-- [Social Icons](#social-icons)
-- [Known issues](#known-issues)
-- [How to edit the theme](#how-to-edit-the-theme)
-- [Changelog](CHANGELOG.md)
-- [Sponsoring](#sponsoring)
-- [Licence](#licence)
+You can see an example of this theme in use at https://abyss.dev.
 
 ---
 ## Features
 
-- Theming: **dark/light mode**, depending on your preferences (dark is default, but you can change it)
+- Dark Mode / Light mode, depending on your preferences (Default is Dark)
 - Great reading experience thanks to [**Inter UI font**](https://rsms.me/inter/), made by [Rasmus Andersson](https://rsms.me/about/)
 - Nice code highlighting thanks to [**PrismJS**](https://prismjs.com)
 - An easy way to modify the theme with Hugo tooling
@@ -35,92 +17,40 @@ This theme was highly inspired by the [hello-friend](https://github.com/panr/hug
 - Support for social icons
 - Support for sharing buttons
 
+### What hello-abyss changes over hello-friend-ng
+- Posts use Date instead of Datetime
+- Footer is more adjustable
+- Hugo Environments can add additional menu or social menus via "extra"
+- CanonicalURL can be overridden to a different domain
+- Logo text is dynamic and changes per page
+- Minor cosmetic changes
+- Maybe other changes undocumented (sorry!)
 
 ## How to start
 
-You can download the theme manually by going to [https://github.com/rhazdon/hugo-theme-hello-friend-ng.git](https://github.com/rhazdon/hugo-theme-hello-friend-ng.git) and pasting it to `themes/hello-friend-ng` in your root directory.
+You can download the theme manually by going to [https://github.com/abyss/hugo-theme-hello-abyss](https://github.com/abyss/hugo-theme-hello-abyss) and pasting it to `themes/hello-abyss` in your root directory.
 
 You can also clone it directly to your Hugo folder:
 
 ``` bash
-$ git clone https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
+$ git clone https://github.com/abyss/hugo-theme-hello-abyss themes/hello-abyss
 ```
 
-If you don't want to make any radical changes, it's the best option, because you can get new updates when they are available. To do so, include it as a git submodule:
+You can also include it as a git submodule:
 
 ``` bash
-$ git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
+$ git submodule add https://github.com/abyss/hugo-theme-hello-abyss themes/hello-abyss
 ```
 
 ## How to configure
 
-The theme doesn't require any advanced configuration. Just copy the following config file.
-To see all possible configurations, [check the docs](docs/config.md).
-Note: There are more options to configure. Take a look into the `config.toml` in `exampleSite`.
-
-``` toml
-baseurl      = "localhost"
-title        = "My Blog"
-languageCode = "en-us"
-theme        = "hello-friend-ng"
-paginate     = 10
-
-[params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
-
-  # Subtitle for home
-  homeSubtitle = "A simple and beautiful blog"
-
-  # Set disableReadOtherPosts to true in order to hide the links to other posts.
-  disableReadOtherPosts = false
-
-  # Enable sharing buttons, if you linke
-  enableSharingButtons = true
-
-  # Metadata mostly used in document's head
-  description = "My new homepage or blog"
-  keywords = "homepage, blog"
-  images = [""]
-
-  # Default theme "light" or "dark"
-  defaultTheme = "dark"
-
-[taxonomies]
-    category = "blog"
-    tag      = "tags"
-    series   = "series"
-
-[languages]
-  [languages.en]
-    title = "Hello Friend NG"
-    subtitle = "A simple theme for Hugo"
-    keywords = ""
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-    readOtherPosts = "Read other posts"
-
-    [languages.en.params.logo]
-      logoText = "hello friend ng"
-      logoHomeLink = "/"
-    # or
-    #
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
-
-  # And you can even create generic menu
-  [[menu.main]]
-    identifier = "blog"
-    name       = "Blog"
-    url        = "/posts"
-```
+Most of the configuration is the same as the original theme, however there are some customizations. If you are interested in using this theme, it may be helpful to see a live configuration at https://github.com/abyss/abyss.dev.
 
 ## More things
 
 ### Built-in shortcodes
 
-Of course you are able to use all default shortcodes from hugo (https://gohugo.io/content-management/shortcodes/).
+There is one additional shortcode, created by Djordje.
 
 #### image
 
@@ -149,20 +79,10 @@ By default the theme is using PrismJS to color your code syntax. All you need to
 ```
 </pre>
 
-### Favicon
-
-Check the [docs](docs/favicons.md).
-
-## Social Icons:
-
-Take a look into this [list](docs/svgs.md)
-
-If you need another one, just open an issue or create a pull request with your wished icon. :)
-
 ## Known issues
 
 There is a bug in Hugo that sometimes causes the main page not to render correctly. The reason is an empty taxonomy part.
-Related issue tickets: [!14](https://github.com/rhazdon/hugo-theme-hello-friend-ng/issues/14) [!59](https://github.com/rhazdon/hugo-theme-hello-friend-ng/issues/59).
+Related issue tickets on hello-friend-ng repo: [!14](https://github.com/rhazdon/hugo-theme-hello-friend-ng/issues/14) [!59](https://github.com/rhazdon/hugo-theme-hello-friend-ng/issues/59).
 
 Either you comment it out completely or you write the following in
 
@@ -172,17 +92,6 @@ Either you comment it out completely or you write the following in
   category = "categories"
 ```
 
-## How to edit the theme
-
-Just edit it. You don't need any node stuff. ;)
-
-## Sponsoring
-
-If you like my work and if you think this project is worth to support it, just <br />
-<a href="https://www.buymeacoffee.com/djordjeatlialp" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-green.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
-
 ## Licence
 
-Copyright © 2019-2020 Djordje Atlialp
-
-The theme is released under the MIT License. Check the [original theme license](https://github.com/rhazdon/hugo-theme-hello-friend-ng/blob/master/LICENSE.md) for additional licensing information.
+The theme is released under the MIT License. Check [LICENSE.md](https://github.com/abyss/hugo-theme-hello-abyss/blob/master/LICENSE.md) for additional licensing information.
